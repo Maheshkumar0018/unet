@@ -55,8 +55,6 @@ def predict(img_path, model_path, patch_size,n_classes):
 
     scaler = MinMaxScaler()
     img = cv2.imread(img_path, 1)
-    original_mask = cv2.imread("test_data/mask_part_008.png", 1)
-    original_mask = cv2.cvtColor(original_mask,cv2.COLOR_BGR2RGB)
     # Loading the model
     model = load_model(model_path, compile=False)
                   
